@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #ffa500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 145px auto auto;
+    grid-template-areas:
+        "nav nav nav nav"
+        "organizacao organizacao pessoal pessoal"
+        "organizacao organizacao pessoal pessoal"
+        "organizacao organizacao pessoal pessoal";
+    grid-gap: 0.4em;
+    text-align: center;
+}
+
+#nav {
+    background-color: rgb(75, 130, 180);
+    color: white;
+    height: 145px;
+    box-shadow: 0 0 0.5rem black;
+    font-family: "Montserrat", sans-serif;
+    grid-area: nav;
+    border-radius: 0.8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu a {
+    text-decoration: none;
+    font-size: 22px;
+    margin-left: 20px;
+    margin-right: 15px;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+#menu a:hover {
+    color: #2c3e50;
+}
+
+#organizacao,
+#pessoal {
+    background-color: white;
+    box-shadow: 0 0 0.5rem black;
+    border-radius: 0.5em;
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#organizacao {
+    grid-area: organizacao;
+    align-self: start;
+}
+
+#pessoal {
+    grid-area: pessoal;
+    align-self: start;
+    padding: 20px; /* Ajuste o valor conforme necessário */
+}
+
+#h1org {
+    color: rgb(75, 130, 180);
+}
+
+#titulo {
+    color: #ffa500;
+    text-shadow: 2px 2px 4px black;
+}
+
+#gdt {
+    text-shadow: 2px 2px 1px black;
+}
